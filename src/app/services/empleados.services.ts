@@ -1,7 +1,5 @@
-import { Service } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { inject } from '@angular/core';
-import { httpResource } from '@angular/common/http';
+import { Service , inject } from '@angular/core';
+import { HttpClient, httpResource } from '@angular/common/http';
 import { IEmpleado } from '../interfaces/iempleado.interface';
 import { firstValueFrom } from 'rxjs';
 

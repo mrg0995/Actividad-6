@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { IEmpleado } from '../../interfaces/iempleado.interface';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './user-card.component.css',
   templateUrl: './user-card.component.html',
 })
-export class UserCardComponent {}
+export class UserCardComponent {
+    myUser = input<IEmpleado>()
+}

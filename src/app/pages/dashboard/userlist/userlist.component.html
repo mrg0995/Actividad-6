@@ -2,7 +2,7 @@
     <h2>Listado de empleados</h2>
     <hr>
     <div>
-        @for(empleado of (response.getUsers()); track empleado._id){
+        @for (empleado of empleados | async; track empleado._id) {
         <article>
             <div>{{ empleado.name }}</div>
         </article>

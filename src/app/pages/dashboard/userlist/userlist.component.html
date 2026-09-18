@@ -2,9 +2,9 @@
     <h2>Listado de empleados</h2>
     <hr>
     <div>
-        @for (empleado of empleados | async; track empleado._id) {
+        @for (empleado of (response | async) ?? []; track empleado._id) {
         <article>
-            <div>{{ empleado.name }}</div>
+            <app-user-card [myUser]="empleado"></app-user-card>
         </article>
         }
     </div>

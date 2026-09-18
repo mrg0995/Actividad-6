@@ -1,9 +1,9 @@
-import { Service , inject } from '@angular/core';
+import { Injectable , inject } from '@angular/core';
 import { HttpClient, httpResource } from '@angular/common/http';
 import { IEmpleado } from '../interfaces/iempleado.interface';
 import { firstValueFrom } from 'rxjs';
 
-@Service()
+@Injectable({providedIn: 'root'})
 export class EmpleadosServices {
     private baseUrl = "https://peticiones.online/api/users"
     private httpClient = inject(HttpClient)

@@ -1,1 +1,12 @@
-<p>nav-dashboard works!</p>
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3 mb-3">
+    <a class="navbar-brand" routerLink="/dashboard">Dashboard</a>
+    <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/user" routerLinkActive="active">Listado de empleados</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/newuser" routerLinkActive="active">Nuevo empleado</a>
+        </li>
+    </ul>
+    <a class="btn btn-outline-light" routerLink="/home">Salir</a>
+</nav>

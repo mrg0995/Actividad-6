@@ -1,1 +1,16 @@
-<p>{{ myUser()?.first_name }}</p>
+<div class="card mb-4">
+    <div class="card-body d-md-flex d-block ">
+        <div>
+            <h5>{{myUser()?.first_name}} {{myUser()?.last_name}}</h5>
+            <p class="card-text text-muted fs-6">{{myUser()?.email}}</p>
+        </div>
+        <div class="d-flex gap-md-2 ms-auto">
+            <a [routerLink]="['/dashboard/user', myUser()?._id]"
+                class="btn btn-primary d-flex align-items-center">Ver</a>
+            <a [routerLink]="['/dashboard/updateuser', myUser()?._id]"
+                class="btn btn-warning d-flex align-items-center">Actualizar</a>
+            <button (click)="deleteUser(myUser()!._id!)"
+                class="btn btn-danger d-flex align-items-center">Borrar</button>
+        </div>
+    </div>
+</div>

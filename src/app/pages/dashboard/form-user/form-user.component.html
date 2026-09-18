@@ -1,1 +1,39 @@
-<p>form-user works!</p>
+<section class="mt-3">
+    <div class="contenedor-form ">
+      <h2>{{title}} empleado</h2>
+      <hr>
+      <form class="d-flex flex-column gap-3" (submit)="getDataForm($event)" novalidate="true">
+        <div>
+          @let first_name = userForm.first_name;
+          <label class="form-label" for="first_name">Nombre</label>
+          <input type="text" id="first_name" class="form-control" [formField]="first_name">
+        </div>
+        <div>
+          @let last_name = userForm.last_name;
+          <label class="form-label" for="last_name">Apellidos</label>
+          <input type="text" id="last_name" class="form-control" [formField]="last_name">
+        </div>
+        <div>
+            @let username = userForm.username;
+            <label class="form-label" for="username">Nombre de usuario</label>
+            <input type="text" id="username" class="form-control" [formField]="username">
+          </div>
+        <div>
+          @let email = userForm.email;
+          <label class="form-label" for="email">Email</label>
+          <input type="text" id="email" class="form-control" [formField]="email">
+        </div>
+        <div>
+          @let image = userForm.image;
+          <label class="form-label" for="image">Imagen</label>
+          <input type="text" id="image" class="form-control" [formField]="image">
+        </div>
+        <div>
+          @let password = userForm.password;
+          <label class="form-label" for="password">Contraseña</label>
+          <input type="password" id="password" class="form-control" [formField]="password">
+        </div>
+        <input class="btn btn-dark" type="submit" [value]="title">
+      </form>
+    </div>
+  </section>
